@@ -1,0 +1,307 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: aliceblue;
+    color: darkslategray;
+}
+
+/* Navbar */
+header {
+    background-color: darkslateblue;
+    color: white;
+    padding: 18px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: lightblue;
+}
+
+nav button {
+    border: none;
+    border-radius: 50%;
+    padding: 9px;
+    cursor: pointer;
+}
+
+/* Home */
+.hero {
+    height: 500px;
+    background-color: lavender;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    color: darkslateblue;
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.main-btn {
+    background-color: darkslateblue;
+    color: white;
+    padding: 12px 22px;
+    border-radius: 25px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.main-btn:hover {
+    background-color: slateblue;
+}
+
+/* Features */
+.features,
+.projects-section,
+.about-page {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.features h2,
+.projects-section h1,
+.about-page h1 {
+    color: darkslateblue;
+    margin-bottom: 25px;
+}
+
+.feature-container,
+.cards,
+.about-box {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.feature,
+.card,
+.about-box div {
+    background-color: white;
+    width: 280px;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px lightgray;
+}
+
+.feature:hover,
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-icon,
+.project-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.feature h3,
+.card h2,
+.about-box h2 {
+    color: darkslateblue;
+    margin-bottom: 12px;
+}
+
+.feature p,
+.card p,
+.about-box p {
+    line-height: 1.5;
+}
+
+/* Search */
+#search {
+    width: 60%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 2px solid lightgray;
+    border-radius: 20px;
+}
+
+/* Filter buttons */
+.filters {
+    margin-bottom: 30px;
+}
+
+.filters button {
+    padding: 9px 16px;
+    margin: 4px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: white;
+    color: darkslateblue;
+}
+
+.filters button:hover {
+    background-color: darkslateblue;
+    color: white;
+}
+
+/* Tags */
+.tags span {
+    background-color: lavender;
+    color: darkslateblue;
+    padding: 5px 8px;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+/* View button */
+.view-btn {
+    width: 100%;
+    margin-top: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: darkslateblue;
+    color: white;
+    cursor: pointer;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-box {
+    background-color: white;
+    padding: 30px;
+    width: 350px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+.close-btn {
+    float: right;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* Footer */
+footer {
+    background-color: darkslateblue;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Dark Mode */
+.dark {
+    background-color: #20242b;
+    color: white;
+}
+
+.dark .hero {
+    background-color: #171a20;
+}
+
+.dark .feature,
+.dark .card,
+.dark .about-box div,
+.dark .popup-box {
+    background-color: #292f38;
+    color: white;
+}
+
+.dark h1,
+.dark h2,
+.dark h3 {
+    color: lightblue;
+}
+
+/* Mobile */
+@media (max-width: 700px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    #search {
+        width: 100%;
+    }
+
+    .card,
+    .feature,
+    .about-box div {
+        width: 100%;
+        max-width: 350px;
+    }
+}
+.technologies {
+    padding: 50px 8%;
+    text-align: center;
+    background-color: lavender;
+}
+
+.technologies h2 {
+    color: darkslateblue;
+    margin-bottom: 25px;
+}
+
+.tech-list {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.tech-list span {
+    background-color: white;
+    color: darkslateblue;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.featured .small-title {
+    color: darkslateblue;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
