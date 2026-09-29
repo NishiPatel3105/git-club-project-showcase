@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Projects - Git Club</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">💻 Git Club</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="about.html">About</a>
+        <button id="themeBtn">🌙</button>
+    </nav>
+
+</header>
+
+
+<section class="projects-section">
+
+    <p class="small-title">OUR PROJECTS</p>
+
+    <h1>Explore Student Projects 🚀</h1>
+
+    <p class="section-text">
+        Discover creative projects built by Git Club members.
+    </p>
+
+
+    <!-- Search -->
+    <input
+        type="text"
+        id="search"
+        placeholder="🔎 Search project..."
+    >
+
+
+    <!-- Filters -->
+    <div class="filters">
+
+        <button onclick="filterProjects('all')">All</button>
+
+        <button onclick="filterProjects('Web')">Web</button>
+
+        <button onclick="filterProjects('AI')">AI</button>
+
+        <button onclick="filterProjects('Java')">Java</button>
+
+    </div>
+
+
+    <!-- Project Cards -->
+    <div class="cards">
+
+
+        <!-- 1 -->
+        <div class="card" data-type="Web">
+
+            <div class="project-icon">🌐</div>
+
+            <h2>EduVerse</h2>
+
+            <p>
+                Student portal for managing academic
+                information and activities.
+            </p>
+
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+            </div>
+
+            <button class="view-btn"
+                onclick="showProject(
+                'EduVerse',
+                'A student portal created for managing academic information.'
+                )">
+
+                View Project →
+
+            </button>
+
+        </div>
+
+
+        <!-- 2 -->
+        <div class="card" data-type="AI">
+
+            <div class="project-icon">🤖</div>
+
+            <h2>AI StudyMate</h2>
+
+            <p>
+                AI assistant that helps students
+                with learning and study.
+            </p>
+
+            <div class="tags">
+                <span>Python</span>
+                <span>AI</span>
+            </div>
+
+            <button class="view-btn"
+                onclick="showProject(
+                'AI StudyMate',
+                'An AI-based assistant designed to help students learn better.'
+                )">
+
+                View Project →
+
+            </button>
+
+        </div>
+
+
+        <!-- 3 -->
+        <div class="card" data-type="Java">
+
+            <div class="project-icon">☕</div>
+
+            <h2>Mini Bank</h2>
+
+            <p>
+                Simple banking system created
+                using Java and OOP concepts.
+            </p>
+
+            <div class="tags">
+                <span>Java</span>
+                <span>OOP</span>
+            </div>
+
+            <button class="view-btn"
+                onclick="showProject(
+                'Mini Bank',
+                'A simple banking application demonstrating Java OOP concepts.'
+                )">
+
+                View Project →
+
+            </button>
+
+        </div>
+
+
+        <!-- 4 -->
+        <div class="card" data-type="Web">
+
+            <div class="project-icon">🏥</div>
+
+            <h2>HealthCare Plus</h2>
+
+            <p>
+                Website providing basic healthcare
+                information and services.
+            </p>
+
+            <div class="tags">
+                <span>HTML</span>
+                <span>CSS</span>
+            </div>
+
+            <button class="view-btn"
+                onclick="showProject(
+                'HealthCare Plus',
+                'A simple healthcare information website created by students.'
+                )">
+
+                View Project →
+
+            </button>
+
+        </div>
+
+
+        <!-- 5 -->
+        <div class="card" data-type="AI">
+
+            <div class="project-icon">🌱</div>
+
+            <h2>EcoTrack</h2>
+
+            <p>
+                Smart project for tracking
+                environmental activities.
+            </p>
+
+            <div class="tags">
+                <span>Python</span>
+                <span>AI</span>
+            </div>
+
+            <button class="view-btn"
+                onclick="showProject(
+                'EcoTrack',
+                'A project that encourages students to track and improve environmental activities.'
+                )">
+
+                View Project →
+
+            </button>
+
+        </div>
+
+
+        <!-- 6 -->
+        <div class="card" data-type="Java">
+
+            <div class="project-icon">📚</div>
+
+            <h2>Smart Library</h2>
+
+            <p>
+                Library management system
+                developed using Java.
+            </p>
+
+            <div class="tags">
+                <span>Java</span>
+                <span>OOP</span>
+            </div>
+
+            <button class="view-btn"
+                onclick="showProject(
+                'Smart Library',
+                'A library management system created using Java and OOP.'
+                )">
+
+                View Project →
+
+            </button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- Popup -->
+
+<div id="popup" class="popup">
+
+    <div class="popup-box">
+
+        <button class="close-btn"
+            onclick="closeProject()">
+            ×
+        </button>
+
+        <div class="popup-icon">🚀</div>
+
+        <h2 id="projectTitle"></h2>
+
+        <p id="projectDescription"></p>
+
+        <button class="main-btn"
+            onclick="closeProject()">
+            Close
+        </button>
+
+    </div>
+
+</div>
+
+
+<footer>
+
+    <p>© 2026 Git Club Project Showcase</p>
+
+    <p>Made by Git Club Students 💜</p>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
